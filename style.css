@@ -1,3 +1,10 @@
+:root {
+    --bg-color: #f0f2f5;
+    --cell-size: 100px;
+    --primary-color: #4a90e2;
+    --accent-color: #f39c12;
+}
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-image: url(background.png);

@@ -57,5 +57,8 @@ function ujJatek() {
     aktiv = true;
     document.getElementById("status").innerText = "X jön";
     
+     for (let i = 0; i < 9; i++) {
+        document.getElementById("c" + i).innerText = "";
+    }
 }
 
