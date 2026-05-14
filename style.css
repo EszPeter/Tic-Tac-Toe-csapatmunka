@@ -20,7 +20,10 @@ body {
     width: 90%;
     max-width: 400px;
 }
-
+#gomb{
+    width: 100px;
+    background-color: red;
+}
 .scoreboard {
     display: flex;
     justify-content: space-around;
