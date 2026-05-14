@@ -67,3 +67,7 @@ function mentes() {
     pontFrissites();
 }
 
+function pontFrissites() {
+    document.getElementById("scoreX").innerText = pontok.X;
+    document.getElementById("scoreO").innerText = pontok.O;
+}
