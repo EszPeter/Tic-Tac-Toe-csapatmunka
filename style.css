@@ -45,3 +45,34 @@ body {
     border-radius: 8px;
     transition: background 0.3s;
 }
+.cell:hover {
+    background-color: #ddd;
+}
+
+.cell.taken {
+    cursor: not-allowed;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: bold;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+#clearStorageBtn {
+    background-color: #e74c3c;
+}
+
+
+@media (max-width: 400px) {
+    :root { --cell-size: 80px; }
+}
