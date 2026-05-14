@@ -1,9 +1,4 @@
-:root {
-    --bg-color: #f0f2f5;
-    --cell-size: 100px;
-    --primary-color: #4a90e2;
-    --accent-color: #f39c12;
-}
+
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -20,7 +15,7 @@ body {
 
 .container {
     text-align: center;
-    background: rgba(255, 255, 255, 0.6);
+    background: rgba(255, 255, 255, 0.9);
     padding: 2rem;
     border-radius: 15px;
     box-shadow: 0 10px 25px rgba(0,0,0,0.5);
@@ -34,7 +29,7 @@ body {
     border-radius: 8px; 
     cursor: pointer;
     color: white;
-    background-color: red;
+    background-color: #e74c3c;;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
     text-transform: uppercase;
@@ -58,15 +53,20 @@ body {
 }
 
 .board {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 10px;
     margin: 20px auto;
+    width: 330px; 
+    background-color: rgb(180, 152, 140); 
+    padding: 10px;
+    border-radius: 10px;
 }
 
 .cell {
-    width: var(--cell-size);
-    height: var(--cell-size);
+    width: 100px;
+    height: 100px;
     background-color: #eee;
     display: flex;
     justify-content: center;
