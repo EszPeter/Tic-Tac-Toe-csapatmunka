@@ -35,4 +35,17 @@ function ellenorzes() {
             break;
         }
     }
+     if (nyertValaki) {
+        document.getElementById("status").innerText = "Győztes: " + jatekos;
+        pontok[jatekos]++;
+        mentes();
+        aktiv = false;
+    } else if (!tabla.includes("")) {
+        document.getElementById("status").innerText = "Döntetlen!";
+        aktiv = false;
+    } else {
+
+        jatekos = (jatekos === "X") ? "O" : "X";
+        document.getElementById("status").innerText = jatekos + " jön";
+    }
 }
