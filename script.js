@@ -71,3 +71,9 @@ function pontFrissites() {
     document.getElementById("scoreX").innerText = pontok.X;
     document.getElementById("scoreO").innerText = pontok.O;
 }
+
+function torles() {
+    pontok = { X: 0, O: 0 };
+    mentes();
+    ujJatek();
+}
