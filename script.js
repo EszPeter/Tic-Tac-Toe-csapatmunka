@@ -13,6 +13,8 @@ function kattintas(index) {
         return;
     }
 
+    tabla[index] = jatekos;
+    document.getElementById("c" + index).innerText = jatekos;
 
 ellenorzes();
 }
