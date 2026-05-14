@@ -62,3 +62,8 @@ function ujJatek() {
     }
 }
 
+function mentes() {
+    localStorage.setItem('pontok', JSON.stringify(pontok));
+    pontFrissites();
+}
+
