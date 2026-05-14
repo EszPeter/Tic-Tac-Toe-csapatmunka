@@ -51,3 +51,11 @@ function ellenorzes() {
         document.getElementById("status").innerText = jatekos + " jön";
     }
 }
+function ujJatek() {
+    jatekos = "X";
+    tabla = ["", "", "", "", "", "", "", "", ""];
+    aktiv = true;
+    document.getElementById("status").innerText = "X jön";
+    
+}
+
