@@ -1,16 +1,14 @@
-
-
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-image: url(background.png);
-    background-repeat:no-repeat;
+    background-repeat: no-repeat;
     background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     margin: 0;
-    
+
 }
 
 .container {
@@ -18,33 +16,40 @@ body {
     background: rgba(255, 255, 255, 0.9);
     padding: 2rem;
     border-radius: 15px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
     width: 90%;
     max-width: 400px;
 }
-#gomb, #clearStorageBtn{
+
+#gomb,
+#clearStorageBtn {
     width: 120px;
     padding: 12px 20px;
     border: none;
-    border-radius: 8px; 
+    border-radius: 8px;
     cursor: pointer;
     color: white;
-    background-color: #e74c3c;;
+    background-color: #e74c3c;
+    ;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
     text-transform: uppercase;
     letter-spacing: 1px;
 }
-#gomb:hover, #clearStorageBtn:hover {
-    background-color: #831205; 
+
+#gomb:hover,
+#clearStorageBtn:hover {
+    background-color: #831205;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
     transform: translateY(-2px);
 }
 
-#gomb:active, #clearStorageBtn:active {
-    transform: translateY(0); 
+#gomb:active,
+#clearStorageBtn:active {
+    transform: translateY(0);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
+
 .scoreboard {
     display: flex;
     justify-content: space-around;
@@ -58,8 +63,8 @@ body {
     justify-content: center;
     gap: 10px;
     margin: 20px auto;
-    width: 330px; 
-    background-color: rgb(207, 206, 206); 
+    width: 330px;
+    background-color: rgb(207, 206, 206);
     padding: 10px;
     border-radius: 10px;
 }
@@ -67,7 +72,7 @@ body {
 .cell {
     width: 100px;
     height: 100px;
-    background-color: #eee;
+    background: rgba(255, 255, 255, 0.8);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -76,9 +81,12 @@ body {
     cursor: pointer;
     border-radius: 8px;
     transition: background 0.3s;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
+
 .cell:hover {
-    background-color: #ddd;
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.2);
 }
 
 .cell.taken {
@@ -104,5 +112,37 @@ button:hover {
 
 
 @media (max-width: 400px) {
-    :root { --cell-size: 80px; }
+    :root {
+        --cell-size: 80px;
+    }
+}
+
+.winner-cell {
+    background-color: #2ecc71 !important;
+    color: white !important;
+    animation: pulse 0.8s infinite alternate;
+}
+
+@keyframes pulse {
+    from {
+        transform: scale(1);
+        box-shadow: 0 0 10px rgba(46, 204, 113, 0.5);
+    }
+    to {
+        transform: scale(1.05);
+        box-shadow: 0 0 25px rgba(46, 204, 113, 0.8);
+    }
+}
+
+
+.winner-text {
+    display: inline-block;
+    animation: bounce 0.5s ease infinite alternate;
+    color: #27ae60;
+    font-weight: bold;
+}
+
+@keyframes bounce {
+    from { transform: translateY(0); }
+    to { transform: translateY(-10px); }
 }

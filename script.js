@@ -16,12 +16,12 @@ function kattintas(index) {
     tabla[index] = jatekos;
     document.getElementById("c" + index).innerText = jatekos;
 
-ellenorzes();
+    ellenorzes();
 }
 function ellenorzes() {
     const nyeroMintak = [
-        [0, 1, 2], [3, 4, 5], [6, 7, 8], 
-        [0, 3, 6], [1, 4, 7], [2, 5, 8], 
+        [0, 1, 2], [3, 4, 5], [6, 7, 8],
+        [0, 3, 6], [1, 4, 7], [2, 5, 8],
         [0, 4, 8], [2, 4, 6]
     ];
 
@@ -34,10 +34,14 @@ function ellenorzes() {
 
         if (a !== "" && a === b && b === c) {
             nyertValaki = true;
+            minta.forEach(index => {
+                document.getElementById("c" + index).classList.add("winner-cell");
+            });
+            // 
             break;
         }
     }
-     if (nyertValaki) {
+    if (nyertValaki) {
         document.getElementById("status").innerText = "Győztes: " + jatekos;
         pontok[jatekos]++;
         mentes();
@@ -50,14 +54,15 @@ function ellenorzes() {
         jatekos = (jatekos === "X") ? "O" : "X";
         document.getElementById("status").innerText = jatekos + " jön";
     }
+
 }
 function ujJatek() {
     jatekos = "X";
     tabla = ["", "", "", "", "", "", "", "", ""];
     aktiv = true;
     document.getElementById("status").innerText = "X jön";
-    
-     for (let i = 0; i < 9; i++) {
+
+    for (let i = 0; i < 9; i++) {
         document.getElementById("c" + i).innerText = "";
     }
 }
