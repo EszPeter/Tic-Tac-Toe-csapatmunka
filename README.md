@@ -1,8 +1,6 @@
 # Projekt Dokumentáció: Tic-Tac-Toe (Amőba)
 
-Ez a dokumentáció a Tic-Tac-Toe webes alkalmazáshoz készült, a megadott PTT követelmények alapján.
-
-## 1. Felhasználói dokumentáció (Rövid)
+## 1. Felhasználói dokumentáció
 
 ### Az alkalmazás célja
 Egy klasszikus 3x3-as amőba játék, ahol két játékos (X és O) mérheti össze tudását. A program figyeli a győzelmi kondíciókat és vezeti a pontszámot.
