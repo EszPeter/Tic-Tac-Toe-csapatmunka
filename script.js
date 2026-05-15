@@ -48,6 +48,12 @@ function ellenorzes() {
         aktiv = false;
     } else if (!tabla.includes("")) {
         document.getElementById("status").innerText = "Döntetlen!";
+        const board = document.querySelector(".board");
+        board.classList.add("draw-shake");
+        
+        for (let i = 0; i < 9; i++) {
+            document.getElementById("c" + i).classList.add("draw-cell");
+        }
         aktiv = false;
     } else {
 
@@ -62,8 +68,13 @@ function ujJatek() {
     aktiv = true;
     document.getElementById("status").innerText = "X jön";
 
+    const board = document.querySelector(".board");
+    board.classList.remove("draw-shake");
+    
     for (let i = 0; i < 9; i++) {
-        document.getElementById("c" + i).innerText = "";
+        let cella = document.getElementById("c" + i);
+        cella.innerText = "";
+        cella.classList.remove("winner-cell", "draw-cell");
     }
 }
 
